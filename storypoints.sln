@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "storypoints", "storypoints\storypoints.csproj", "{5070CEC2-CAD5-46D5-B58E-AF10B50756E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "storypoints", "storypoints\storypoints.csproj", "{5070CEC2-CAD5-46D5-B58E-AF10B50756E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "storypoints.Core", "storypoints.Core\storypoints.Core.csproj", "{F7AC12C9-F7DC-4870-BE46-8FF649D3581D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "storypoints.Data.Model", "storypoints.Data.Model\storypoints.Data.Model.csproj", "{3107FF39-3719-4175-AAAA-612178642B59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5070CEC2-CAD5-46D5-B58E-AF10B50756E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5070CEC2-CAD5-46D5-B58E-AF10B50756E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5070CEC2-CAD5-46D5-B58E-AF10B50756E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7AC12C9-F7DC-4870-BE46-8FF649D3581D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7AC12C9-F7DC-4870-BE46-8FF649D3581D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7AC12C9-F7DC-4870-BE46-8FF649D3581D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7AC12C9-F7DC-4870-BE46-8FF649D3581D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3107FF39-3719-4175-AAAA-612178642B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3107FF39-3719-4175-AAAA-612178642B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3107FF39-3719-4175-AAAA-612178642B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3107FF39-3719-4175-AAAA-612178642B59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

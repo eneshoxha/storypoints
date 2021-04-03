@@ -1,6 +1,6 @@
 using System;
 
-namespace storypoints.Models
+namespace storypoints.Data.Model
 {
     public class ErrorViewModel
     {

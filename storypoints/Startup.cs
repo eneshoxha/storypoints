@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using storypoints.Core.Abstraction;
+using storypoints.Core.Repository;
+using storypoints.Hubs;
+using System.Text.Json.Serialization;
 
 namespace storypoints
 {
@@ -24,6 +24,18 @@ namespace storypoints
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            
+            // SignalR
+            services.AddSignalR(opt =>
+            {
+                opt.MaximumReceiveMessageSize = null;
+            })
+            .AddJsonProtocol(opts =>
+            {
+                opts.PayloadSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            });
+
+            services.AddSingleton<IRoomRepository, RoomRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +63,8 @@ namespace storypoints
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapHub<RoomHub>("/rooms/v1/connect");
             });
         }
     }

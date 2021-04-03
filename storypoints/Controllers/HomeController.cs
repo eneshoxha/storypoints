@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using storypoints.Models;
+using storypoints.Data.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
